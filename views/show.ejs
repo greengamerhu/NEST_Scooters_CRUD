@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= scooter.brand %>: <%= scooter.model %>   </title>
+    <style>
+        #readable {
+            background-color: white;
+            color: black; 
+            display: inline;
+            padding: 1px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="border: 3px <%= scooter.color %> solid; display: inline-block; text-align:center; padding: 3px;" >
+        <p>
+            <span style="font-weight: 900;">Brand: </span> 
+                <%= scooter.brand %> 
+        </p>
+        <p><span style="font-weight: 900;">Model: </span> : 
+            <%= scooter.model %> 
+        </p>
+        <p><span style="font-weight: 900;">Max Speed: </span>  
+            <%= scooter.max_speed %> km/h 
+        </p>
+
+        <div style=" background-color: <%= scooter.color  %>; text-align: center;"><span id="readable">Color</span> </div>
+        <% if (scooter.available) { %>
+            <p style="color: green;">In stock</p>
+        <%   } else { %>
+            <p style="color: red;">Out of stock :(</p>
+
+            <% } %> 
+    </div> <br>
+    <a href="/"><button>Back to the List</button></a>
+
+</body>
+</html>

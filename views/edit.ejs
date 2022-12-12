@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="post">
+        <p>
+            Brand: <input type="text" name="brand" value="<%= scooter.brand  %>  ">
+        </p>
+        <p>
+            Model: <input type="text" name="model" value="<%= scooter.model  %>">
+        </p>
+        <p>
+            Color: <input type="color" name="color" value="<%= scooter.color  %>">
+        </p>
+        <p>
+            Max speed: <input type="number" name="max_speed" value="<%= scooter.max_speed  %>">
+        </p>
+        <p>
+            Available: <input type="checkbox" name="available" value="1" <% if (scooter.available) { %>
+             checked
+            <% } %> >
+        </p>
+        <button type="submit">Submit</button> 
+
+
+    </form>
+    <a href="/"><button>Back to the list</button></a>
+
+    
+</body>
